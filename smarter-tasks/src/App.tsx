@@ -1,13 +1,14 @@
 import "./App.css";
-import TaskForm from "./TaskForm";
+// import TaskForm from "./TaskForm";
+import TaskApp from "./TaskApp";
 // import Task from './Task'
-import TaskList from "./TaskList";
+// import TaskList from "./TaskList";
 
 function App() {
   return (
     <div className="App">
-      <TaskForm />
-      <TaskList tasks={[]}/>    </div>
+      <TaskApp />
+    </div>
   );
 }
 
