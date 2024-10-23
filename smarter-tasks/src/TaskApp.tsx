@@ -25,6 +25,22 @@ class TaskApp extends React.Component<TaskAppProp, TaskAppState> {
     });
   };
 
+  addDue = (task: TaskItem) => {
+    this.setState((state) => {
+      return {
+        tasks: [...state.tasks, task],
+      };
+    });
+  }
+
+  addDes = (task: TaskItem) => {
+    this.setState((state) => {
+      return {
+        tasks: [...state.tasks, task],
+      };
+    });
+  }
+
   render() {
     return (
       <div className="container py-10 max-w-4xl mx-auto">
@@ -40,7 +56,7 @@ class TaskApp extends React.Component<TaskAppProp, TaskAppState> {
             <h1 className="text-slate-500 text-xl font-bold text-center mb-2">
               Pending
             </h1>
-            <TaskForm addTask={this.addTask} />
+            <TaskForm addTask={this.addTask} addDes={this.addDes} addDue={this.addDue} />
             <TaskList tasks={this.state.tasks} />
           </div>
         </div>
